@@ -1,0 +1,104 @@
+
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+	<style>
+	.divContent{height:200px;width:300px;border:1px solid red;overflow:hidden;}
+	</style>
+</head>
+<body>
+ <div class="divFrame">
+         <div class="divTitle">
+              <span>最新点评</span>
+         </div>
+         <div class="divContent">         
+         </div>
+         <div class="divSubmit">
+             <form action="" id="cmt_footer"><input type="text" name=" " id="input_text" placeholder="请输入你的评论....."><input type="button" value="提交" id="subt"></form>
+         </div>
+		 
+    </div>	
+<script type="text/javascript">
+	/// <reference path="jquery-1.4.2-vsdoc.js"/>
+/// <reference path="jquery-1.4.2.js"/>
+$(function() {
+
+    //用户ID user_id
+    var user_id = 1;
+    //专辑ID album_id
+    var album_id = 29;
+    
+    
+    //元素绑定全局ajaxStart事件
+    //$("#divMsg").ajaxStart(function() {
+   //     $(this).show(); //显示元素
+   // })
+    //元素绑定全局ajaxStop事件
+   // $("#divMsg").ajaxStop(function() {
+   //     $(this).html("数据处理已完成。").hide();
+   // })
+    //初始化点评数据
+   LoadData(album_id);
+    $("#subt").click(function() { //点击"发表"按钮事件
+    
+
+    //提交的内容 comm_content
+   	var comm_content = $("#input_text").val();
+   	if(comm_content == ""){
+   		console.log("输入评论");
+   	}else{
+   	 $.ajax(
+           {
+               type: "GET",
+               url: "http://220.168.86.34:8052/LoveBabyDDXX/RecordAlbumCommServlet",  //请求增加数据动态页
+              // dataType: "josn",
+               data: { user_id: user_id, album_id: album_id, comm_content: comm_content },
+               success: function(msg) {
+                   LoadData();
+                   $("#input_text").val("");
+               }
+           })   
+   	}	       
+        
+    })
+    /*
+    *动态加载XML格式的点评数据
+    */
+    function LoadData() {
+        $.ajax(
+           {
+               type: "GET",              
+               //dataType:"json",
+               url:"http://220.168.86.34:8052/LoveBabyDDXX/AlbumCommentServlet?album_id="+album_id,
+               cache: false,
+               success: function(data) {
+               var commentData = data;
+        	   var comments =commentData.split("*");            	 
+			   commentsData = eval(comments[0]);
+			   commentsDatas = commentsData.length;
+               $(".divContent").empty(); //先清空标记中的内容
+               var strHTML = ""; //初始化保存内容变量
+               if(commentsDatas == 0){
+               		strHTML += "<p>暂无评论</p>";
+               }else{
+               	strHTML += "<ul>"
+                for(i=0;i<commentsDatas;i++){
+                	 strHTML += "<li>"
+                	 strHTML += "<p>"+commentsData[i].user_nick_name+"</p>"
+                	 strHTML +="<p>"+commentsData[i].comm_content+"</p>"
+                	  strHTML +="<p>"+commentsData[i].comm_time+"</p>"
+                	 strHTML += "</li>"
+                }
+                 strHTML += "</ul>"
+               }                 
+                	$(".divContent").html(strHTML); //显示处理后的数据
+            }
+        })
+    }
+})
+</script>
+</body>
+</html>

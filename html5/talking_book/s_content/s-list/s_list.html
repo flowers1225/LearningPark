@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>HTML</title>
+		<meta name="viewport" content="target-densitydpi=device-dpi, width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="/LoveBabyDDXX/html5/css/reset-1.1.min.css" media="all" />
+		<link rel="stylesheet" type="text/css" href="css/c_style.css" media="all" />
+		<script type="text/javascript" src="/LoveBabyDDXX/html5/js/jquery-1.10.1.min.js"></script>
+		<script type="text/javascript" src="/LoveBabyDDXX/html5/js/MsgBox.js"></script>
+	</head>
+
+	<body>
+		<div id="musicPlayerWrap" class="m-player-wrap">
+		  <!---标题----->
+		  <div id="musicInfo" class="m-info">
+
+			  <div id="musicPlayerSwitch" class="m-player-switch on" title="打开播放器">
+				 <a href="javascript:void(0);" id="playerSwitchBtn" class="switch-on">返回</a>
+			  </div>
+
+
+			  <div id="infoWrap" class="info-wrap">
+				<dl>
+				  <dt id="musicName" title="FeelPlayer">标题</dt>
+					<dd id="musicSinger" title="播放最爱的音乐"></dd>
+					<dd id="albumName" title=""></dd>
+				</dl>
+
+				<div id="musicFunction" class="m-function clearfix">
+				  <a href="javascript:void(0);" id="albumLists" class="album-lists" title="打开专辑列表"></a>
+				  <a href="javascript:void(0);" id="lyrics" class="lyrics" title="打开歌词"></a>
+				</div>
+			  </div>
+			</div>
+
+
+			<!---歌词-->
+		  <div id="lrcWrap" class="lrc-wrap hidden">
+			<div id="loadLrc" class="load-lrc hidden">歌曲载入中...</div>
+			<div id="lrcBox" class="lrc-box"></div>
+		  </div>
+
+
+			<!----控制面板--->
+		  <div id="musicPlayer" class="m-player">
+			<div id="broadcastControl" class="broadcast-control clearfix">
+			  <!-- <div class="broadcast-control-l"></div> -->
+			  <div class="broadcast-control-m">
+				<a href="javascript:void(0);" id="play" class="m-play" title="播放"></a>
+				<a href="javascript:void(0);" id="pause" class="m-pause hidden" title="暂停"></a>
+				<a href="javascript:void(0);" id="next" class="m-next" title="下一曲"></a>
+				<a href="javascript:void(0);" id="prev" class="m-prev" title="上一曲"></a>
+
+				<div class="play-progress-rate">
+				  <span id="playTime" class="play-time">0:00</span>
+				  <div id="progressRateBg" class="progress-rate-bg">
+					<div id="progressRateColor" class="progress-rate-color" style="width:0;"></div>
+				  </div>
+				  <span id="surplusTime" class="surplus-time">-0:00</span>
+				</div>
+
+				<a href="javascript:void(0);" id="nowVolume" class="volume volume-active now-volume"></a>
+				<a href="javascript:void(0);" id="nowMute" class="mute mute-active now-volume hidden"></a>
+				<a href="javascript:void(0);" id="nowPlayManner" class="now-manner list-cycle list-cycle-active" title="列表循环"></a>
+			  </div>
+			  <div class="broadcast-control-r"></div>
+			</div>
+		  </div>
+
+		</div>
+	</body>
+	<script type="text/javascript" src="js/iscrolls.js"></script>
+	<script type="text/javascript" src="js/listplay.js"></script>
+	
+</html>

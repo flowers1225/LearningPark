@@ -1,0 +1,189 @@
+a{-webkit-tap-highlight-color:rgba(0,0,0,0);display:inline-block;}
+a:hover{text-decoration:none;}
+li{-webkit-tap-highlight-color:rgba(0,0,0,0);}
+img{max-width:100%;height:auto;-webkit-touch-callout:none;}
+body,#page{position:relative;overflow:hidden;}
+#header{background:url("../img/study_head.png") no-repeat;-webkit-background-size:100% 100%;}
+#header a{background:url("../img/zsabb_mainlist.png") no-repeat;-webkit-background-size:100% 100%;text-indent:-999em;}
+#header h1{display:inline-block;position:absolute; color:#F5F9EE;}
+#nav{position:absolute;z-index:100;background:#F5B441;border:2px solid #fff;-webkit-box-shadow:1px 1px 1px #D3D3D3;border-radius:10px;}
+#nav ul{display:-webkit-box;}
+#content{overflow:hidden;background:url("../img/study_bg.png") no-repeat;}
+#content header{background:url("../img/study_c06.png") no-repeat;}
+#content header img{display:inline-block;float:left;}
+/*加载*/
+#pageBox{width:100%;height:100%;background:#fff;}
+#progressBox{ width:50%; height:40px; border:1px solid #C8C8C8; background:white; position:relative;top:40%;left:25%;border-radius:5px;}
+#progressBar{ position:absolute; left:0; top:0; z-index:2; height:40px; width:100%; line-height:40px; color:white; text-align:center; border-radius:5px;font-size:20px; font-weight:bold; font-family:Georgia; clip:rect(0px, 0, 40px, 0px); background:#00A1F5;}
+#progressText { position:absolute; left:0; top:0; z-index:1; width:100%; height:40px; line-height:40px; color:black; text-align:center; border-radius:5px;font-size:20px; font-weight:bold; font-family:Georgia;}
+/*弹出*/
+#msgbox{
+	position:fixed;
+	left:0;
+	right:0;
+	bottom:0;
+	top:0;
+	background:rgba(0,0,0,0.1);
+	z-index:9999;
+}
+#msg{
+	width:200px;
+	height:100px;
+	background:#fff;
+	position:absolute;
+	left:50%;
+	top:50%;
+	margin:-50px 0 0 -100px;
+	border-radius:10px;
+	text-align:center;
+}
+.m-text{padding:10px;border-bottom:1px solid #CECBCE;height:40px;line-height:40px;}
+.m-btn{color:#0871EF;display:-webkit-box;}
+.m-btn span{line-height:39px;-webkit-box-flex:1;display:block;}
+span.cancel{border-left:1px solid #CECBCE}
+@media screen and (min-height: 1080px) and (max-width: 1920px) {
+	body,#page{width:100%;height:1080px;}
+	#header{width:100%;height:100px;padding-top:30px;}
+	#header a{width:100px;height:80px;margin-left:20px;padding-left:3px;}
+	#header h1{left:42%;font:58px "微软雅黑";line-height:55px;text-shadow:1px 1px 33px;}
+	#nav {height:100px;left:40%;margin-top:10px;padding:8px;border-radius:15px;}
+ 	#nav li a{font:48px "微软雅黑";line-height:100px;color:#fff;padding:0 50px;} 
+ 	
+ 	#nav li.active a{background:url('../img/study_c02.png') no-repeat;text-shadow:1px 1px 1px #B87903;}
+ 	#nav li:nth-of-type(1).active a{-webkit-background-size:244px 100px;}
+ 	#nav li.active a{-webkit-background-size:292px 100px;}
+ 
+ 	#content{width:100%;height:950px;-webkit-background-size:100% 100%;}
+	#content header{-webkit-background-size:100% 100%;width:695px;height:90px;margin:15px 5px;padding-top:11px;}
+	#content header img{width:80px;height:80px;margin-left:49px;}
+	#content .ch_h,#content .ch_f{display:inline-block;color:#EBF1F6;font:38px "微软雅黑";float:left;line-height:72px;}
+	#content .ch_h{width:320px;text-align:center}
+	#content .ch_f{width:220px;text-align:center}
+ 	
+	#content nav{margin:0 auto;display:-webkit-box;text-align:center;font-size:0.5em;font-weight:normal;color:#2A4551;padding:15px 0 20px 0;}
+	#content nav ul{display:-webkit-box;padding:0 !important;}
+	#content nav ul li{width:255px;height:120px;padding-top:3px;padding:0 64px;float:none;}
+	#content nav ul li.m p{color:#fff;background:url('../img/study_m01.png') no-repeat;background-size:100% 100%;height:120px;}
+	#content nav img{width:210px;height:116px;}
+	#content nav p{font-size:50px;line-height:115px;color:#2A4551;}
+ 	
+ 	#show_content{overflow:hidden;height:665px;}
+ 	#show_content .no_content{font-size:47px;text-align:center;padding-top:10%;letter-spacing:1em;color:#6f6c6c}
+ 	#content article{height:385px;overflow:initial;}
+ 	#content article li{background:url('../img/study_m06.png') no-repeat;-webkit-background-size:100% 100%;float:none;}
+ 	#content article li div.s_content{display:-webkit-box;width:92%;margin:0 auto;}
+ 	#content article li a{display:-webkit-box;-webkit-box-flex:1;-webkit-box-pack:center;margin-top:20px;margin-bottom:50px;}
+ 	#content article li a img{box-shadow:3px 3px 6px #ADA9A1;width:270px;height:313px;}
+}
+  @media screen and (max-width: 1400px) {
+ 	body,#page{width:100%;height:800px;}
+	#header{width:1280px;height:77px;padding-top:18px;}
+	#header a{width:67px;height:55px;margin-left:10px;padding-left:3px;}
+	#header h1{left:42%;font:38px "微软雅黑";line-height:55px;text-shadow:1px 1px 33px;}
+	#nav {height:60px;left:44%;margin-top:10px;padding:5px;}
+ 	#nav li a{font:28px "微软雅黑";line-height:60px;color:#fff;padding:0 30px;} 
+ 	
+ 	#nav li.active a{background:url('../img/study_c02.png') no-repeat;text-shadow:1px 1px 1px #B87903;}
+ 	#nav li:nth-of-type(1).active a{-webkit-background-size:144px 60px;}
+ 	#nav li.active a{-webkit-background-size:172px 60px;}
+ 
+ 	#content{width:100%;height:715px;-webkit-background-size:100% 100%;}
+	#content header{-webkit-background-size:100% 100%;width:455px;height:54px;margin:15px 5px;}
+ 	#content header img{width:49px;height:49px;margin-left:30px;}
+ 	#content .ch_h,#content .ch_f{display:inline-block;color:#EBF1F6;font:28px "微软雅黑";float:left;line-height:49px;}
+	#content .ch_h{width:200px;text-align:center}
+	#content .ch_f{width:150px;text-align:center}
+ 	
+	#content nav{margin:0 auto;display:-webkit-box;text-align:center;font-size:0.5em;font-weight:normal;color:#2A4551;padding:8px 0 10px 0;}
+	#content nav ul{display:-webkit-box;padding:0 !important;}
+	#content nav ul li{width:159px;height:80px;padding-top:3px;padding:0 46px;float:none;}
+	#content nav ul li.m p{color:#fff;background:url('../img/study_m01.png') no-repeat;background-size:100% 100%;height:80px;}
+	#content nav img{width:92px;height:72px;}
+	#content nav p{font-size:27px;line-height:80px;color:#2A4551;}
+ 	
+ 	#show_content{overflow:hidden;height:530px;}
+ 	#show_content .no_content{font-size:47px;text-align:center;padding-top:10%;letter-spacing:1em;color:#6f6c6c}
+ 	#content article{height:310px;overflow:initial;}
+ 	#content article li{background:url('../img/study_m06.png') no-repeat;-webkit-background-size:100% 100%;float:none;}
+ 	#content article li div.s_content{display:-webkit-box;width:92%;margin:0 auto;}
+ 	#content article li a{display:-webkit-box;-webkit-box-flex:1;-webkit-box-pack:center;margin-top:20px;margin-bottom:50px;}
+ 	#content article li a img{box-shadow:3px 3px 6px #ADA9A1;width:205px;height:238px}
+ }
+ @media screen and (max-width: 1400px) and (max-height:720px){
+	body,#page{width:100%;height:720px;}
+	#content{width:100%;height:635px;-webkit-background-size:100% 100%;}
+	#show_content{overflow:hidden;height:450px;}
+ }
+  
+ @media screen and (max-width: 575px) {
+ 	body,#page{width:570px;height:320px;}
+	#header{width:568px;height:39px;padding-top:5px;}
+	#header a{width:25px;height:25px;margin-left:10px;padding-left:3px;margin-top:5px;}
+	#header h1{left:40%;font:20px "微软雅黑";line-height:33px;text-shadow:1px 1px 33px;}
+    #nav {height:30px;left:38%;margin-top:8px;padding:2px;}
+	
+	#nav li.active a{background:url('../img/study_c02.png') no-repeat;text-shadow:1px 1px 1px #B87903;}
+	#nav li a{font:15px "微软雅黑";line-height:30px;color:#fff;padding:0 13px;} 
+	#nav li:nth-of-type(1).active a{-webkit-background-size:71px 30px;}
+	#nav li.active a{-webkit-background-size:86px 30px;}
+ 		
+ 	#content{width:570px;height:276px;-webkit-background-size:100% 100%;}
+ 	#content header{-webkit-background-size:100% 100%;width:210px;height:27px;margin:10px 0;}
+ 	#content header img{width:24px;height:24px;margin-left:10px;}
+ 	#content .ch_h,#content .ch_f{display:inline-block;color:#EBF1F6;font:13px "微软雅黑";float:left;line-height:25px;}
+	#content .ch_h{width:93px;text-align:center}
+	#content .ch_f{width:70px;text-align:center}
+ 	
+	#content nav{margin:0 auto;display:-webkit-box;text-align:center;font-size:0.5em;font-weight:normal;color:#2A4551;padding:8px 0 10px 0;}
+	#content nav ul{display:-webkit-box;}
+	#content nav ul li{width:70px;height:33px;padding-top:3px;padding:0 20px;}
+	#content nav ul li.m p{color:#fff;background:url('../img/study_m01.png') no-repeat;background-size:100% 100%;height:33px;}
+	#content nav img{width:67px;height:34px;}
+	#content nav p{font-size:17px;line-height:30px;}
+ 	
+ 	#show_content{overflow:hidden;height:178px;}
+ 	#show_content .no_content{font-size:17px;}
+ 	#content article{height:120px;overflow:initial;}
+ 	#content article li{background:url('../img/study_m06.png') no-repeat;-webkit-background-size:100% 100%;float:none;}
+ 	#content article li div.s_content{display:-webkit-box;width:92%;margin:0 auto;}
+ 	#content article li a{display:-webkit-box;-webkit-box-flex:1;-webkit-box-pack:center;margin-top:5px;margin-bottom:20px;}
+ 	#content article li a img{box-shadow:3px 3px 6px #ADA9A1;width:90px;height:94px;}
+
+ } 
+
+
+@media screen and (max-width: 480px) {
+	body,#page{width:480px;height:320px;}
+	#header{width:480px;height:39px;padding-top:5px;}
+	#header h1{left:40%;font:20px "微软雅黑";line-height:33px;text-shadow:1px 1px 33px;}
+	
+	#nav {height:30px;left:38%;margin-top:5px;padding:2px;}
+	#nav ul{padding-left:2px;}
+	#nav li.active a{background:url('../img/study_c02.png') no-repeat;text-shadow:1px 1px 1px #B87903;}
+	#nav li a{font:15px "微软雅黑";line-height:30px;color:#fff;padding:0 8px;} 
+	#nav li:nth-of-type(1).active a{-webkit-background-size:61px 30px;}
+	#nav li.active a{-webkit-background-size:76px 30px;}
+	
+	#content{width:480px;height:276px;-webkit-background-size:100% 100%;}
+	#content header{-webkit-background-size:100% 100%;width:184px;height:30px;margin:8px 0;padding-top:3px;}
+	#content header img{width:24px;height:24px;margin-left:5px;}
+	#content .ch_h,#content .ch_f{display:inline-block;color:#EBF1F6;font:13px "微软雅黑";float:left;line-height:25px;}
+	#content .ch_h{width:72px;text-align:center}
+	#content .ch_f{width:75px;text-align:center}
+	
+
+	#content nav{margin:0 auto;display:-webkit-box;text-align:center;font-size:0.5em;font-weight:normal;color:#2A4551;padding:8px 0 10px 0;}
+	#content nav ul{display:-webkit-box;}
+	#content nav ul li{width:70px;height:33px;padding-top:3px;padding:0 13px;}
+	#content nav ul li.m p{color:#fff;background:url('../img/study_m01.png') no-repeat;background-size:100% 100%;}
+	#content nav img{width:46px;height:29px;}
+	#content nav p{font-size:17px;line-height:30px;}
+	
+	#show_content{overflow:hidden;height:178px;}
+	#content article{height:120px;overflow:initial;}
+	#content article li{background:url('../img/study_m06.png') no-repeat;-webkit-background-size:100% 100%;float:none;}
+	#content article li div.s_content{display:-webkit-box;width:92%;margin:0 auto;}
+	#content article li a{display:-webkit-box;-webkit-box-flex:1;-webkit-box-pack:center;margin-top:5px;margin-bottom:20px;}
+	#content article li a img{box-shadow:3px 3px 6px #ADA9A1;width:81px;height:94px;}
+	
+}
