@@ -3,7 +3,6 @@
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
 %>
-<script>var timestamp=new Date().getTime();console.log('timestamp '+timestamp)</script>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
@@ -27,7 +26,6 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		<script type="text/javascript" src="js/AjaxContent.js?time=new Date()"></script>
 		
 	</head>
-	<script>var timestamp1=new Date().getTime();console.log('timestamp1 '+timestamp1)</script>
 	<body>
 	<!-- 
 	<div id="pageBox">
@@ -57,21 +55,17 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				<p class="ch_f"><span></span>分</p>
 			 </header>
 			 <!-- 内容显示-->
-			 <script>var timestamp2=new Date().getTime();console.log('timestamp2 '+timestamp2)</script>
 			<article>			
 
 	        </article>
 		 </section>
-		 <script>var timestamp3=new Date().getTime();console.log('timestamp3 '+timestamp3)</script>
 		  <!-- 大类显示-->
 		<footer id="footer">
 		 </footer>
-		 <script>var timestamp4=new Date().getTime();console.log('timestamp4 '+timestamp3)</script>
-		 
+
 	</div>
 	</body>
 		<script src="js/idangerous.swiper-2.1.min.js"></script>
 		<script src="js/idangerous.swiper.3dflow-2.0.js"></script>
 		<script type="text/javascript" src="js/index_init.js"></script>
 </html>
- <script>var timestamp5=new Date().getTime();console.log('timestamp5 '+timestamp4)</script>
