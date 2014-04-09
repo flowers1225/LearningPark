@@ -468,10 +468,8 @@ function formatInAlbumLists(child_id){
     function createMusicList(musiclist){
     	var albumNum = musiclist.length;
     	for (i=0;i<albumNum;i++){
-    		 html += "<li class=\"s-l\">";
+    		html += "<li class=\"s-l\">";
              html += "<span class=\"s-name\" title=\"" + musiclist[i].voice_name + "\">" + musiclist[i].voice_name + "</span>";
-            // html += "<span class=\"s-album\" title=\"" + song[i].a_child_name + "\">" + song[i].a_child_name + "</span>";
-             //html += "<span class=\"s-time\">" + musiclist[i].voice_id + "</span>";
              html += "</li>";
     	}
         //先关闭列表 然后点击播放列表按钮实现跳转
@@ -481,9 +479,7 @@ function formatInAlbumLists(child_id){
         listWrap.parentNode.id = "iscrollLists";
         
         //显示返回专辑列表
-        //$("#listWrap").parent().removeClass();
         $("#listWrap").parent().removeClass().addClass("List-heights");
-      //  $("#listWrap").attr("style","");
     	cutoverList.title = "返回列表"
         cutoverList.innerHTML = "返回";
         cutoverList.className = "cutover-list";
@@ -520,8 +516,6 @@ MUSICENGINE.prototype.formatAlbumLists = function(){
         }
         html += "<div class=\"album-cover-hover hidden\">";
         html += "<div class=\"mask\" title=\"\"></div>";
-        //html += "<span class=\"album-song-num\" title=\"" + song[i].list.length + "首歌曲\">" + song[i].list.length.length + "</span>";  song[i].pay_count
-       // html += "<div class=\"play-btn\" title=\"播放专辑：" + song[i].a_child_name + "\"><div class=\"play-icon\"></div>播放专辑</div>";
         html += "</div>";
         html += "</li>";
     }
@@ -556,13 +550,8 @@ MUSICENGINE.prototype.songPlayMode = function(direction){
         songIndex = this.songIndex + 1,
         song,
         album;
-        //获取当前专辑的歌曲数量
-        //songNum = this.song.songData[this.albumIndex].albumSong.length,
         //获取歌曲总数
         musicNum = musiclist.length,
-        //获取专辑数量
-       // albumNum = this.song.songData.length;
-		//console.log(songNum)
     //【列表循环】
     console.log(songIndex)
      console.log(musicNum)
@@ -671,7 +660,6 @@ function innerMusicList(){
             html += "<div class=\"list-title\" id=\"header\">";
             html += "<h1 id=\"listName\"></h1>";
             html += "<span id=\"cutoverList\" class=\"cutover-list hidden\"></span>";
-           // html += "<div id=\"closeList\" class=\"close-list\" title=\"关闭列表\"></div>";
             html += "</div>";
             html += "<div id=\"iscrollList\"><ul id=\"listWrap\" class=\"list-wrap\" data-temp=\"\"></ul></div>";
         document.getElementById("musicList").innerHTML = "";
@@ -911,7 +899,6 @@ function musicPlayerSwitch(){
         //播放器打开动画
         timer = setInterval(function(){
             n += 50;
-           // musicPlayer.style.top = n + "px";
             if(musicList){
                 musicList.style.left = n + "px";
             }
@@ -930,7 +917,6 @@ function musicPlayerSwitch(){
         clearInterval(timer);
         timer = setInterval(function(){
             m += 50;
-          //  musicPlayer.style.top = "-" + m + "px";
             if(musicList){
                 musicList.style.left = "-" + m + "px";
             }
@@ -1099,17 +1085,9 @@ function getPageCoord(element){
 }
 
 function iscroll(){
-	//var Lists = "."+List;
-	//console.log(typeof Lists)
-	//myScroll;
-	//myScroll = new IScroll(Lists,{mouseWheel:true,click:true,checkDOMChanges:true});
 	myScroll = new IScroll("#iscrollList",{mouseWheel:true,click:true,checkDOMChanges:true});
-	//document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
 }
 function iscrolls(){
-	//var Lists = "."+List;
-	//console.log(typeof Lists)
-	//var myScrolls;
 	myScrolls = new IScroll("#iscrollLists",{mouseWheel:true,click:true});
 	//
 }
